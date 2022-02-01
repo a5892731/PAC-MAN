@@ -22,7 +22,6 @@ def get_player_pos(level, player_char='*'):
             if char == player_char:
                 return x, y
 
-
 def move(level, direction):
     """Handles moves on the level"""
     oldx, oldy = get_player_pos(level)
@@ -30,10 +29,15 @@ def move(level, direction):
     newy = oldy + direction[1]
     if level[newy][newx] == 'x':
         sys.exit(0)
-    if level[newy][newx] != '#':
+    if level[newy][newx] == 'o':
+        cratex = newx + direction[0]
+        cratey = newy + direction[1]
+        if level[cratey][cratex] in '. ':
+            level[cratey][cratex] = 'o'
+            level[newy][newx] = ' '
+    if level[newy][newx] in '. ':
         level[oldy][oldx] = ' '
         level[newy][newx] = '*'
-
 
 if __name__ == '__main__':
     tile_img, tiles = load_tiles(img_addr = '../images/tiles.xpm')

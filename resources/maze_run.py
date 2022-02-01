@@ -18,7 +18,7 @@ maze[1][1] = '*'
 maze[5][10] = 'x'
 
 # draw the graphics
-tile_img, tiles = load_tiles()
+tile_img, tiles = load_tiles(img_addr = '../images/tiles.xpm')
 img = draw_grid(maze, tile_img, tiles)
 display.blit(img, Rect((0, 0, 384, 224)), Rect((0, 0, 384, 224)))
 pygame.display.update()
