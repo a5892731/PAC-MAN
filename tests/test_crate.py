@@ -1,3 +1,9 @@
+'''
+this test is for check movement player and crate
+
+'''
+
+
 
 from resources.draw_maze import parse_grid
 from resources.moves import move
