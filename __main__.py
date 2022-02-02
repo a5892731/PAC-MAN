@@ -1,7 +1,7 @@
 # author: a5892731
 # date: 31.01.2022
 # last update: 02.02.2022
-# version: 1.0.0
+# version: 1.0.1
 #
 # description:
 # this is a simple game named "maze runner" or "PAC-MAN"
